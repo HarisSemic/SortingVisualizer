@@ -1,0 +1,53 @@
+// COLORS
+$color-primary: #8ba5d0;
+$color-primary-dark: darken($color-primary, 9);
+
+$color-secondary: $color-primary-dark;
+$color-secondary-dark: darken($color-secondary, 9);
+
+$color-ternary: #cbd189;
+$color-ternary-dark: darken($color-ternary, 9);
+
+$color-quaternary: #7ec885;
+$color-quaternary-dark: darken($color-quaternary, 9);
+
+$color-quinary: #ec8c6f;
+$color-quinary-dark: darken($color-quinary, 9);
+
+$color-senary: #d1899d;
+$color-senary-dark: darken($color-senary, 9);
+
+$header-background: #333;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+// FONT
+$default-font-size: 1.7rem;
+
+// LAYOUT
+$padding-body: 3rem;
+
+$gutter-horizontal: 6rem;
+$row-width: 75%;
+$row-width-2: 95%;
+
+// BORDERS
+$border-button-slider: 1px solid $color-grey-light-1;
+$border-button-slider-hover: 1px solid $color-secondary;
+
+// BREAKPOINTS
+$break-1: 1797px;
+$break-2: 1528px;
+$break-3: 1285px;
+$break-4: 1159px;
+$break-5: 936px;
+$break-6: 740px;
+$break-7: 549px;

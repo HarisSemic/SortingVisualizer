@@ -1,0 +1,11 @@
+.footer {
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-size: $default-font-size;
+  color: $color-grey-light-1;
+  background-color: $header-background;
+}

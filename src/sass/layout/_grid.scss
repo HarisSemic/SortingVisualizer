@@ -1,0 +1,26 @@
+.row {
+  width: $row-width;
+  display: flex;
+  justify-content: center;
+
+  @include respondMax($break-5) {
+    width: $row-width-2;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+[class^='col-']:not(:last-child) {
+  margin-right: $gutter-horizontal;
+}
+
+.col-1-of-2-no-margin {
+  flex-basis: calc(100% / 2);
+  margin: 0 !important;
+}
+
+.col-1-of-2 {
+  flex-basis: calc((100% - #{$gutter-horizontal}) / 2);
+}

@@ -1,0 +1,55 @@
+@mixin sliderThumbStyle() {
+  border: $border-button-slider;
+  height: 2.6rem;
+  width: 1.6rem;
+  border-radius: 3px;
+  background: $header-background;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-secondary;
+    border: $border-button-slider-hover;
+    box-shadow: 0 0.1rem 0.3rem $color-secondary;
+  }
+
+  .u-disabled & {
+    border-color: grey !important;
+  }
+}
+
+@mixin sliderTrackStyle() {
+  width: 100%;
+  height: 1.2rem;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 1.3px;
+  border: $border-button-slider;
+  transition: all 0.3s;
+  &:hover {
+    border: $border-button-slider-hover;
+  }
+
+  .u-disabled & {
+    border-color: grey !important;
+  }
+}
+
+/*breakpoint argument choices:
+- break-1
+- break-2
+
+1em=16px
+*/
+
+// Media query manager
+@mixin respondMax($breakpoint) {
+  @media (max-width: $breakpoint/16px * 1em) {
+    @content;
+  }
+}
+
+@mixin respondMin($breakpoint) {
+  @media (min-width: $breakpoint/16px * 1em) {
+    @content;
+  }
+}

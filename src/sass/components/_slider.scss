@@ -1,0 +1,89 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 30rem;
+  font-family: inherit;
+
+  &__label {
+    flex: 0 0 19%;
+    font-size: $default-font-size;
+    color: $color-grey-light-1;
+    font-family: inherit;
+    letter-spacing: 1px;
+
+    @include respondMax($break-1) {
+      flex-basis: 25%;
+    }
+
+    @include respondMax($break-4) {
+      flex-basis: 30%;
+    }
+
+    @include respondMax($break-7) {
+      flex-basis: 45%;
+    }
+
+    .u-disabled & {
+      color: grey !important;
+    }
+  }
+
+  &__range {
+    flex: 0 0 81%;
+
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+
+    user-select: none;
+
+    @include respondMax($break-4) {
+      flex-basis: 70%;
+    }
+
+    @include respondMax($break-7) {
+      flex-basis: 55%;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    &:focus {
+      outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+
+    &::-ms-track {
+      width: 100%;
+      cursor: pointer;
+
+      /* Hides the slider so custom styles can be added */
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    &::-webkit-slider-thumb {
+      @include sliderThumbStyle();
+      margin-top: -0.86rem;
+    }
+
+    &::-moz-range-thumb {
+      @include sliderThumbStyle();
+    }
+
+    /* All the same stuff for IE */
+    &::-ms-thumb {
+      @include sliderThumbStyle();
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include sliderTrackStyle();
+    }
+
+    &::-moz-range-track {
+      @include sliderTrackStyle();
+    }
+  }
+}

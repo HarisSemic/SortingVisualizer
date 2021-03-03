@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-32KSX5EBJ9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-32KSX5EBJ9');
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./src/img/icons/icon-bar-chart.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/sorting-visualizer.css" />
+    <script defer src="./src/js/controller.js"></script>
+    <title>Sorting visualizer</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="row">
+        <div class="col-1-of-2-no-margin">
+          <div class="options options--sliders">
+            <div class="slider">
+              <label for="array-length" class="slider__label">Array size</label>
+              <input
+                type="range"
+                id="array-length"
+                class="slider__range"
+                name="volume"
+                min="10"
+                max="200"
+              />
+            </div>
+            <div class="slider">
+              <label for="sorting-speed" class="slider__label"
+                >Sorting speed</label
+              >
+              <input
+                type="range"
+                id="sorting-speed"
+                class="slider__range"
+                name="volume"
+                min="500"
+                max="1004"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="btn-help">?</div>
+        <div class="col-1-of-2-no-margin">
+          <div class="options options--sort">
+            <ul class="options__items">
+              <li class="options__item">
+                <button id="btn-bubble-sort" class="options__btn-sort">
+                  Bubble sort
+                </button>
+              </li>
+              <li class="options__item">
+                <button id="btn-selection-sort" class="options__btn-sort">
+                  Selection sort
+                </button>
+              </li>
+              <li class="options__item">
+                <button id="btn-insertion-sort" class="options__btn-sort">
+                  Insertion sort
+                </button>
+              </li>
+              <li class="options__item">
+                <button id="btn-merge-sort" class="options__btn-sort">
+                  Merge sort
+                </button>
+              </li>
+              <li class="options__item">
+                <button id="btn-quick-sort" class="options__btn-sort">
+                  Quick sort
+                </button>
+              </li>
+              <li class="options__item">
+                <button id="btn-heap-sort" class="options__btn-sort">
+                  Heap sort
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="row"><div class="sorting-container"></div></div>
+      <div class="button-container"></div>
+    </main>
+    <footer class="footer"><span>&copy; Haris Semic, 2021</span></footer>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal__content">
+        <div class="row row--full-width u-margin-bottom-small">
+          <div class="modal__heading">
+            <h1>Sorting algorithms visualizer</h1>
+            <span class="modal__close">&times;</span>
+          </div>
+        </div>
+        <div class="row row--full-width">
+          <div class="col-1-of-2-no-margin">
+            <div class="modal__usage">
+              <h2 class="modal__heading-2 u-margin-bottom-extrasmall">Usage</h2>
+              <ul class="modal__usage-list">
+                <li>1. Select the array size using the appropriate slider.</li>
+                <li>
+                  2. Select the sorting speed using the appropriate slider.
+                </li>
+                <li>
+                  3. Click on the desired sorting method and watch sorting take
+                  place in real time.
+                </li>
+                <li>
+                  Sorting can be stopped at any time by pressing the esc key.
+                  New array will need to be generated before any subsequent
+                  sorting.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-1-of-2-no-margin">
+            <div class="modal__color-coding">
+              <h2 class="modal__heading-2 u-margin-bottom-extrasmall">
+                Color coding
+              </h2>
+              <ul>
+                <li>
+                  <div class="modal__bar-description">
+                    <img
+                      src="./src/img/bars/bar-primary.PNG"
+                      alt=""
+                      class="modal__bar-img"
+                    />
+                    <span>- bar idle (not being used)</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="modal__bar-description">
+                    <img
+                      src="./src/img/bars/bar-selected.PNG"
+                      alt=""
+                      class="modal__bar-img"
+                    />
+                    <span>- bar selected</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="modal__bar-description">
+                    <img
+                      src="./src/img/bars/bar-swap.PNG"
+                      alt=""
+                      class="modal__bar-img"
+                    />
+                    <span>- bar being swapped</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="modal__bar-description">
+                    <img
+                      src="./src/img/bars/bar-observe.PNG"
+                      alt=""
+                      class="modal__bar-img"
+                    />
+                    <span>- bar being observed</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="modal__bar-description">
+                    <img
+                      src="./src/img/bars/bar-done.PNG"
+                      alt=""
+                      class="modal__bar-img"
+                    />
+                    <span>- bar in its final position</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

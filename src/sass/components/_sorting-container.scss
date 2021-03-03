@@ -1,0 +1,70 @@
+.sorting-container {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+
+  &__element {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 1px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12%;
+      height: 100%;
+    }
+
+    &--primary {
+      background-color: $color-primary;
+
+      &::after {
+        background-color: $color-primary-dark;
+      }
+    }
+
+    &--select {
+      background-color: $color-secondary;
+
+      &::after {
+        background-color: $color-secondary-dark;
+      }
+    }
+
+    &--swap {
+      background-color: $color-ternary;
+
+      &::after {
+        background-color: $color-ternary-dark;
+      }
+    }
+
+    &--done {
+      background-color: $color-quaternary;
+
+      &::after {
+        background-color: $color-quaternary-dark;
+      }
+    }
+
+    &--observed {
+      background-color: $color-quinary;
+
+      &::after {
+        background-color: $color-quinary-dark;
+      }
+    }
+
+    &--moved {
+      background-color: $color-senary;
+
+      &::after {
+        background-color: $color-senary-dark;
+      }
+    }
+  }
+}
