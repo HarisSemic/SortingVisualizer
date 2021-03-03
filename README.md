@@ -1,2 +1,2 @@
 # SortingVisualizer
-Visualizer for various sorting algorithms
+# Visualizer for various sorting algorithms
