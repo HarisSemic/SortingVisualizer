@@ -6,7 +6,7 @@ This app is deployed with Netlify and can be accessed here: https://sortalgovisu
 
 ## Purpose of this project
 
-I wanted to improve my skills with javascript and revise my knowledge on sorting algorithms. The app was built from the ground up, and the entirety of the desing, html, javascript, and sass/css was done by me.
+I wanted to improve my skills with javascript and revise my knowledge on sorting algorithms. The app was built from the ground up, and the entirety of the desing, html, javascript, and sass/css, were done by me.
 
 ## Code organization
 
