@@ -23,3 +23,7 @@ The ```src``` directory contains the following three subdirectories.
 ## Bundling
 
 Project was bundled using Parcel2.0.
+
+## License
+
+ISC
