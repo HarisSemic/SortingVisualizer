@@ -20,3 +20,6 @@ The ```src``` directory contains the following three subdirectories.
   * ```layout``` - code for header, main, footer and grid (row and column implemented via flexbox).
 * ```img``` - contains images used within the app.
 
+## Bundling
+
+Project was bundled using Parcel2.0.
