@@ -12,7 +12,7 @@ I wanted to improve my skills with javascript and revise my knowledge on sorting
 
 The ```src``` directory contains the following three subdirectories. 
 
-* ```js``` - Each functionality (eg. sorting algorithm) is contained within its own view file. Each sorting algorithm view contains sorting code, animation generation code, and event publisher for triggering the animations, and extends from the SortView class. Animations are universally handled by the ```animate()``` function contained within the SortView, which means that any additional sorting algorithm can be coded up and plugged in, without touching the rest of the code. Event subscribers are implemented within the controller, and model contains state variables necessary for the app.
+* ```js``` - Each functionality (eg. sorting algorithm) is contained within its own view file. Each sorting algorithm view contains sorting code, animation generation code, and event publisher for triggering the animations, and extends from the SortView class. Animations are universally handled by the ```animate()``` function contained within the SortView, which means that any additional sorting algorithm can be coded up and plugged in without touching the rest of the code. Event subscribers are implemented within the controller, and model contains state variables necessary for the app.
 * ```sass``` - Contains the following subdirectories:
   * ```abstracts``` - contains sass mixins and variables.
   * ```base``` - base, typography and utilities.
